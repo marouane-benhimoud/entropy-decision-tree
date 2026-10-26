@@ -1,9 +1,7 @@
 # Decision Tree From Scratch — Report
 
 ## GitHub repository
-**GitHub link:** [ADD YOUR GITHUB REPOSITORY URL HERE]
-
-> Replace the placeholder above with the URL of the repository after pushing this project to GitHub. Do not submit the placeholder as the final link.
+https://github.com/marouane-benhimoud/entropy-decision-tree
 
 ## Project objective
 The objective is to implement a classification decision tree from scratch using **entropy** and **information gain**, without using a machine-learning library to build the tree. This follows the course material on decision trees, where entropy measures uncertainty and information gain measures the reduction in uncertainty after a split.
@@ -47,7 +45,16 @@ Run the demonstration with:
 python examples/tennis.py
 ```
 
-Record the actual test output here after running the tests in your environment.
+Tree:
+ROOT: Outlook
+  == 'Sunny': Humidity
+    == 'High' -> predict 'No' (samples=3, counts={'No': 3})
+    == 'Normal' -> predict 'Yes' (samples=2, counts={'Yes': 2})
+  == 'Overcast' -> predict 'Yes' (samples=4, counts={'Yes': 4})
+  == 'Rain': Wind
+    == 'Weak' -> predict 'Yes' (samples=3, counts={'Yes': 3})
+    == 'Strong' -> predict 'No' (samples=2, counts={'No': 2})
+\nPrediction for Sunny, Cool, High, Strong: No
 
 ## Limitations
 This is a compact educational classifier, not a replacement for production-grade tree libraries. Missing values are not supported. Categorical splits are multi-way, and the greedy procedure is not guaranteed to find a globally optimal tree. Pruning and probability estimates are not implemented.
